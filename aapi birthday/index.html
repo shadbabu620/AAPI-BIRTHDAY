@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Sara 🎉</title>
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+  overflow-x:hidden;
+}
+.card{
+  background:#fff;
+  max-width:900px;
+  margin:40px auto;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+h1{
+  color:#ff5f7e;
+  font-size:38px;
+  animation: bounce 1.5s infinite alternate;
+}
+@keyframes bounce{
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+h2{color:#555;}
+p{font-size:18px;line-height:1.6;}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+.gallery img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+.confetti{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  pointer-events:none;
+}
+.confetti span{
+  position:absolute;
+  animation-name:fall;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+}
+@keyframes fall{
+  0%{transform:translateY(-10vh);}
+  100%{transform:translateY(110vh);}
+}
+</style>
+</head>
+<body>
+
+<!-- Audio with controls -->
+<audio id="bdayAudio" controls autoplay loop>
+  <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<div class="confetti" id="confetti"></div>
+
+<div class="card">
+  <h1>🎂 Happy 22nd Birthday Fojiya Aapi 🎉</h1>
+  <h2>You are truly special 💖</h2>
+  <p>
+    “Dear Aapi,
+On your special day, I want to tell you how truly important you are in my life. Your love, guidance, and kindness have shaped me in ways I can never fully express. Every smile of yours lights up the darkest of days, and every word of yours gives strength to my heart.
+
+May Allah bless you with endless happiness, perfect health, and success in every step you take. I pray that your life is filled with the same warmth, love, and joy that you bring to everyone around you.
+
+Always keep smiling, shining, and inspiring those who are lucky enough to have you in their lives. You are irreplaceable, and I am forever grateful for your presence. ✨💖**
+  </p>
+
+  <h2>🌸 Beautiful Memories 🌸</h2>
+  <div class="gallery">
+    <img src="photo3.jpeg">
+    <img src="photo2.jpeg">
+    <img src="photo4.jpeg">
+    <img src="photo5.jpeg">
+<img src="photo6.jpeg">
+<img src="photo7.jpeg">
+<img src="photo8.jpeg">
+  </div>
+</div>
+
+<script>
+// Confetti generator
+const box = document.getElementById('confetti');
+for(let i=0;i<70;i++){
+  const s=document.createElement('span');
+  s.style.left=Math.random()*100+'vw';
+  s.style.width = s.style.height = 5 + Math.random()*10 + 'px';
+  s.style.background=`hsl(${Math.random()*360},80%,60%)`;
+  s.style.animationDuration = 2 + Math.random()*3 + 's';
+  box.appendChild(s);
+}
+</script>
+
+</body>
+</html>
